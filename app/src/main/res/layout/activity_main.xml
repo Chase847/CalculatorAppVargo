@@ -6,58 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/TitleTextView"
-        android:layout_width="182dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/dotgothic16"
-        android:text="Calculate64"
-        android:textAlignment="center"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:text="Button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/TitleTextView" />
+        android:id="@+id/clearButton"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="CA"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="615dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="129dp"
-        android:layout_height="316dp"
-        app:srcCompat="@drawable/mariobrick"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="272dp" />
+    <Button
+        android:id="@+id/decimalPointButton"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="."
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="615dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="128dp"
-        android:layout_height="57dp"
-        android:fontFamily="@font/dotgothic16"
-        android:text="Start \nCalculating"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="402dp" />
-
-    <ImageView
-        android:id="@+id/StartScreenBackground"
-        android:layout_width="426dp"
-        android:layout_height="859dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/subtractionButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toEndOf="@+id/divisionButton"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="X"
+        app:layout_constraintEnd_toStartOf="@+id/additionButton"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mariobackground"
-        tools:visibility="invisible" />
+        tools:layout_editor_absoluteY="269dp" />
+
+    <Button
+        android:id="@+id/additionButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="112dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="9"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="4"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="1"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="2"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="6"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="8"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="3"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="5"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="615dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="75dp"
+        android:layout_height="82dp"
+        android:text="7"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/additionButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="269dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

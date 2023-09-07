@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.CalculatorAppVargo" parent="Base.Theme.CalculatorAppVargo" />
+    <style name="operationButtons" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
 </resources>
