@@ -11,18 +11,25 @@ public class MainActivity extends AppCompatActivity {
     String inputTVDisplay = "";
     String firstNum = "";
     String secondNum = "";
-    Boolean isSecondNum = false;
-    Boolean isFirstClick = true;
+    boolean isSecondNum = false;
+    boolean isFirstClick = true;
     String sign = "";
+    String firstHistoryTV = "";
+    String secondHistoryTV = "";
+
 
 
     TextView inTV;
+    TextView fHTV;
+    TextView sHTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inTV = findViewById(R.id.inputTV);
+        fHTV = findViewById(R.id.historyTV1);
+        sHTV = findViewById(R.id.historyTV2);
     }
 
 
@@ -82,9 +89,12 @@ public class MainActivity extends AppCompatActivity {
             } else if (v.getId() == R.id.enterButton) {
                 calculate(v);
             } else if (v.getId() == R.id.clearButton) {
+                secondHistoryTV = firstHistoryTV;
+                firstHistoryTV = inputTVDisplay;
                 inputTVDisplay = "";
                 firstNum = "";
                 secondNum = "";
+                isSecondNum = false;
             } else if (v.getId() == R.id.decimalPointButton) {
                 inputTVDisplay = inputTVDisplay + ".";
             }
@@ -93,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else{
+            inTV.setText("");
             if (v.getId() == R.id.button1) {
                 inputTVDisplay = inputTVDisplay + "1";
                 secondNum += "1";
@@ -140,18 +151,40 @@ public class MainActivity extends AppCompatActivity {
             } else if (v.getId() == R.id.enterButton) {
                 calculate(v);
             } else if (v.getId() == R.id.clearButton) {
+                secondHistoryTV = firstHistoryTV;
+                firstHistoryTV = inputTVDisplay;
                 inputTVDisplay = "";
                 firstNum = "";
                 secondNum = "";
+                isSecondNum = false;
             } else if (v.getId() == R.id.decimalPointButton) {
                 inputTVDisplay = inputTVDisplay + ".";
             }
         }
 
         inTV.setText(inputTVDisplay);
+        fHTV.setText(firstHistoryTV);
+        sHTV.setText(secondHistoryTV);
     }
 
     public void calculate(View v){
-        double fNum = firstNum.;
+        double fNum = Integer.valueOf(firstNum);
+        double sNum = Integer.valueOf(secondNum);
+        double value = 0;
+        if (sign.equals("+")){
+            value = fNum + sNum;
+        }
+        else if (sign.equals("-")){
+            value = fNum - sNum;
+        }
+        else if (sign.equals("*")){
+            value = fNum * sNum;
+        }
+        else if (sign.equals("/")){
+            value = fNum/sNum;
+        }
+        inputTVDisplay = value + "";
+        inTV.setText(inputTVDisplay);
+
     }
 }
