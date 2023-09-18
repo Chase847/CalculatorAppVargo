@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name = "numButtonHeight">75dp</dimen>
+    <dimen name = "numButtonWidth">82dp</dimen>
+    <dimen name = "signButtonHeight">50dp</dimen>
+    <dimen name = "signButtonWidth">80dp</dimen>
+    <dimen name = "numButtonFontSize">20dp</dimen>
+    <dimen name = "signButtonFontSize">16dp</dimen>
+    <dimen name = "numButtonPaddingRightLeft">4dp</dimen>
+    <dimen name = "numButtonPaddingUpDown">4dp</dimen>
+    <dimen name = "signButtonPaddingLeftRight">4dp</dimen>
+    <dimen name = "signButtonRightMargin">24dp</dimen>
+    <dimen name = "signButtonLeftMargin">24dp</dimen>
+</resources>

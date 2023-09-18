@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CalculatorAppVargo</string>
+    <string name="calcuclator_app_vargo">CalculatorAppVargo</string>
+    <string name="historytv1"></string>
+    <string name="historytv2"></string>
 </resources>

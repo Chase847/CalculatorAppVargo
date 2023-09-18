@@ -2,6 +2,7 @@ package com.example.calculatorappvargo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -70,22 +71,27 @@ public class MainActivity extends AppCompatActivity {
                 isSecondNum = true;
                 isFirstClick = true;
                 sign = "+";
+                inputTVDisplay = "";
             } else if (v.getId() == R.id.subtractionButton) {
                 if(isFirstClick){
                     firstNum += "-";
                 }
                 else {
                     isSecondNum = true;
+                    isFirstClick = true;
                     sign = "-";
+                    inputTVDisplay = "";
                 }
             } else if (v.getId() == R.id.multiplicationButton) {
                 isSecondNum = true;
                 isFirstClick = true;
                 sign = "*";
+                inputTVDisplay = "";
             } else if (v.getId() == R.id.divisionButton) {
                 isSecondNum = true;
                 isFirstClick = true;
                 sign = "/";
+                inputTVDisplay = "";
             } else if (v.getId() == R.id.enterButton) {
                 calculate(v);
             } else if (v.getId() == R.id.clearButton) {
@@ -103,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else{
-            inTV.setText("");
             if (v.getId() == R.id.button1) {
                 inputTVDisplay = inputTVDisplay + "1";
                 secondNum += "1";
@@ -134,21 +139,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (v.getId() == R.id.button0) {
                 inputTVDisplay = inputTVDisplay + "0";
                 secondNum += "0";
-            } else if (v.getId() == R.id.additionButton) {
-                isSecondNum = true;
-            } else if (v.getId() == R.id.subtractionButton) {
-                if(isFirstClick){
-                    firstNum += "-";
-                }
-                else {
-                    isSecondNum = true;
-                    sign = "-";
-                }
-            } else if (v.getId() == R.id.multiplicationButton) {
-                isSecondNum = true;
-            } else if (v.getId() == R.id.divisionButton) {
-                isSecondNum = true;
-            } else if (v.getId() == R.id.enterButton) {
+            }  else if (v.getId() == R.id.enterButton) {
                 calculate(v);
             } else if (v.getId() == R.id.clearButton) {
                 secondHistoryTV = firstHistoryTV;
@@ -185,6 +176,10 @@ public class MainActivity extends AppCompatActivity {
         }
         inputTVDisplay = value + "";
         inTV.setText(inputTVDisplay);
+
+    }
+
+    public void changeTheme(View v){
 
     }
 }
